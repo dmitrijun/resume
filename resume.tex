@@ -1,0 +1,314 @@
+\documentclass[letterpaper,10pt,dvipsnames]{article}
+\usepackage[T2A]{fontenc}
+\usepackage{makecell}
+\usepackage[link=off]{phonenumbers}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+
+\usepackage[english,russian]{babel}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\usepackage[margin=0.3in]{geometry}
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.0in}
+\addtolength{\evensidemargin}{-0.0in}
+\addtolength{\textwidth}{0in}
+\addtolength{\topmargin}{5pt}
+\addtolength{\textheight}{0.0in}
+
+\urlstyle{same}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}% http://ctan.org/pkg/hyperref
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!50!red,
+  linkbordercolor=red,
+  urlcolor=blue!70!black
+}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\def \ifempty#1{\def\temp{#1} \ifx\temp\empty }
+
+\newcommand{\resumeItem}[2]{
+  \item\small{
+  	\ifempty{#1}#2\else\textbf{#1}{: #2 \vspace{-2pt}}\fi
+  }
+}
+
+
+
+\usepackage{fancybox}
+
+\usepackage{lmodern}
+\usepackage{tikz}
+
+% Style definition
+\definecolor{mygray}{gray}{0}
+\tikzset{rndblock/.style={rounded corners,rectangle,draw,outer sep=0pt}}
+
+% Command Definition
+% 1 optional to customize the aspect, 2 mandatory: text to be framed
+\newcommand{\tframed}[2][]{\tikz[baseline=(h.base)]\node[rndblock,#1] (h) {\color{black}{#2}};}
+
+\newcommand*{\mystrut}{\rule[-0.2\baselineskip]{0pt}{0.8\baselineskip}}
+\newcommand{\skill}[1]{\tframed[lightgray]{\mystrut#1}}
+
+
+\newcommand{\resumeSubheading}[5]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textcolor{my_gray}{#2} \\
+      \textit{\small#3} & \textcolor{my_gray}{\textit{\small #4}} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeExpSubheading}[5]{
+% 1- Company name
+% 2- Location
+% 3- Job title
+% 4- Duration
+% 5- Company description
+% 6- Skill chips
+  \vspace{2pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \large\textbf{#1} & #4 \\
+      \color{gray} \textit{\scriptsize#5} & \\ %#2\\
+      \textit{#3} & \\
+    \end{tabular*}\vspace{2pt}
+}
+
+\newcommand{\resumeEduSubheading}[5]{
+% 1- School name
+% 2- Location
+% 3- Title
+% 4- Duration
+% 5- Description
+  \item
+    \vspace{2pt}\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \large\textbf{#1} & #2 \\
+      \textit{#3} & #4\\\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjSubheading}[1]{
+% 1- Project name
+% 2- 
+  \vspace{2pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \large\textbf{#1}  &  \\
+    \end{tabular*}\vspace{-2pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\usepackage{changepage}
+\newcommand{\resumeDesc}[1]{\begin{adjustwidth}{5pt}{0pt}\vspace{-2pt}{\small{#1}}\end{adjustwidth}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+
+
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}l}
+  % \textbf{\Huge Dmitry Malkov} & Email : \href{mailto:domalkov@edu.hse.ru}{domalkov@edu.hse.ru}\\
+  % & Github: \href{https://github.com/dmitrijun}{github.com/dmitrijun}\\
+  % & Phone no.: \href{tel:+79625929526}{+79625929526} \\
+  % & LinkedIn : \href{https://www.linkedin.com/in/dmitrijun}{linkedin.com/in/dmitrijun} \\
+  % & Telegram: \href{https://t.me/dmalkov}{@dmalkov}
+% \end{tabular*}
+\begin{tabularx}{\textwidth} { 
+   >{\raggedright\arraybackslash}X 
+  >{\raggedleft\arraybackslash}X }
+    \begin{tabular}{p{0.65\textwidth}}
+        \textbf{
+        \Huge Dmitrii Malkov
+        } \\
+       
+    \end{tabular} &
+    \begin{tabular}{l}
+        Email : \href{mailto:dmitrii.malkov.unreal@gmail.com}{dmitrii.malkov.unreal@gmail.com} 
+        \\ Github: \href{https://github.com/dmitrijun}{github.com/dmitrijun}
+        % \\ Phone No.: \href{tel:+79625929526}{+79625929526} 
+        % \\ LinkedIn : \href{https://www.linkedin.com/in/dmitrijun}{linkedin.com/in/dmitrijun} 
+        \\ Telegram: \href{https://t.me/dmitrijun}{@dmitrijun}
+    \end{tabular} 
+\end{tabularx}
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+      \resumeExpSubheading
+      {The Layer}{Remote}
+      {Machine Learning Engineer}{February 2024 - September 2024}
+      {AI Data Enrichment Platform}
+      \resumeDesc{
+    \begin{itemize}
+            \item Created multi-step LLM data ingestion pipelines, reducing the manual labor for client onboarding and data processing up to 90\% 
+            \item Built data enrichment pipelines extracting features from text and images, reducing labeling costs up to 8x.
+    \end{itemize}
+    }\vspace{-7pt}
+      
+      \resumeExpSubheading
+      {Sber}{Moscow, Russia}
+      {Data Scientist}{March 2023 - June 2023}
+      {Largest Russian bank}
+      \resumeDesc{        
+        \begin{itemize}
+            \item Built a data collection pipeline using PySpark to gather over 50 million records on client defaults, enabling comprehensive modeling and analysis of default behavior over time.\\
+            \item Proposed a credit scoring model based on survival curves and embeddings from XGBoost trees, achieving an average C-Index of 0.85 over a 3-5 year horizon.
+        \end{itemize}}\vspace{-7pt}
+      \resumeExpSubheading
+      {Group-IB}{Moscow, Russia}
+      {Software Developer}{July 2022 - November 2022}
+      {A leading provider of cybersecurity solutions}
+      \resumeDesc{
+      \begin{itemize}
+          \item Integrated Cobalt Strike to Caldera framework, automating complex adversary emulation scenarios and enhancing the system's capability for advanced security testing with a 30\% increase in test coverage. 
+        \item Developed a benchmarking framework to optimize threat detection efficiency in the company's M-XDR solution, reducing product update release time by 40-60\%.
+        \item Set up a robust CI/CD pipeline for seamless deployment of the framework to a multi-agent ESXi sandbox environment, speeding up the deployment process.
+      \end{itemize}}\vspace{-7pt}
+      \resumeExpSubheading
+      {Zabra}{Saransk, Russia}  
+      {Machine Learning Software Engineer}
+      {Mar 2020 - May 2022}
+      {Computer Vision Startup}
+      \resumeDesc{
+        \begin{enumerate}
+            \item AI-Powered Cashier-less Shop
+            \begin{itemize}
+                \item Developed CV models for entry and exit detection using YOLOv4, achieving mAP of over 0.98 on own dataset.
+                \item Presented over 10 reports on various CV papers, leading to the implementation of improved models and enhanced system performance for object tracking and detection.
+                \item Created interactive dashboards to monitor and analyze key store performance metrics
+                \item Introduced tools and modules for efficient manipulation and processing of 3D scene data.
+                \item Implemented RESTful APIs on Google Cloud Platform to support mobile app functionality and store business logic.
+                \item Developed a cross-platform React Native application, enhancing the in-store experience for visitors.
+            \end{itemize}
+                \item Video analytics for personal protective equipment usage enforcement for Russian Railways
+                \begin{itemize}
+                    \item Trained machine learning models to associate employees with objects detected by the camera, \\
+                    leveraging data from individual radio transceivers for precise identification and tracking.
+                    \item Developed SPA web control panel using React.js, incorporating real-time worker location tracking on interactive maps.
+                \end{itemize}
+            \end{enumerate}
+        }
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+  \resumeEduSubheading
+       {University of Oulu}{Oulu, Finland}
+      {Master's, Computer Science and Engineering}{2024-2026}
+	 
+    \resumeEduSubheading
+       {Higher School of Economics}{Moscow, Russia}
+      {Bachelor's, of Applied Mathematics and Informatics}{2020-2024}
+	 
+        \resumeDesc{
+        \textbf{Courses}: Algorithms and Data Structures, Linear Algebra, Statistics, Machine Learning, \\
+        Deep Learning for Natural Language Processing, Highload Machine Learning, Online Experiments\\
+        \vspace{7pt}
+        % \textbf{Thesis:} 
+      }
+
+      
+      
+  \resumeSubHeadingListEnd
+
+% \section{Projects}
+%   \resumeSubHeadingListStart
+%       \resumeProjSubheading
+%       {Bakery Helper}
+%           \resumeDesc{
+%           Developed a Telegram bot for bakery owners that provides sales analytics (item rankings, monthly charts) \\
+%           and demand forecasts using machine learning risk models. 
+%           Managed a team of 3 people.
+%           }\vspace{-5pt}
+%       \resumeProjSubheading
+%       {Anecdote Generator}
+%           \resumeDesc{
+%           Developed a generative model using a RNN architecture with LSTM layers, trained on a corpus of Russian anecdotes. \\
+%           The resulting model achieved a test perplexity metric of 39.12.
+% }   \vspace{-5pt}
+%     \resumeProjSubheading
+%           {Neural Translation}
+%               \resumeDesc{
+%               Developed a neural translation model using Seq2Seq architecture. 
+%               Set up experiment tracking on the WandB platform. \\
+%               Achieved BLEU score of 26.3 on test.       
+%     }
+      
+%   \resumeSubHeadingListEnd
+
+
+%--------PROGRAMMING SKILLS------------
+\section{Skills}
+ \resumeSubHeadingListStart
+    \item {
+        \textbf{Programming \& Web Technologies}: Python, JavaScript, C++, Scala, HTML, CSS
+    }
+   \vspace{-7pt}
+   \item{
+     \textbf{Databases \& Data handling: }{PostgreSQL, Firebase, Redis, MongoDB, HDFS}
+   }
+   \vspace{-7pt}
+   \item{
+     \textbf{Data handling: }{SQL, Spark, Pandas, Kafka, Apache Airflow, MQTT, RabbitMQ, SQLAlchemy, Hadoop}
+   }
+   
+   \vspace{-7pt}
+   \item{
+     \textbf{Visualization: }{Matplotlib, Seaborn, Plotly}
+   }
+   \vspace{-7pt}
+   \item{
+     \textbf{ML \& DS: }{PyTorch, Transformers, CatBoost, SciKit-Learn, NumPy, Langchain, Weights\&Biases, MLFlow, OpenVINO}
+   }
+   \vspace{-7pt}
+   \item{
+     \textbf{Web Frameworks: }{Flask, FastAPI, Django, Streamlit}
+   }
+   \vspace{-7pt}
+   \item{
+     \textbf{Other: }{Unix/Linux, Bash, Git, Docker, CI/CD, GCP, OpenCV, FFmpeg}
+   }
+   \vspace{-7pt}
+ \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
