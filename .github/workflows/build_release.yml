@@ -16,11 +16,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install LaTeX
-        run: sudo apt-get update && sudo apt-get install -y \
-          texlive-latex-recommended \
-          texlive-latex-extra \
-          texlive-lang-cyrillic \
-          cm-super
+        run: sudo apt-get update && sudo apt-get install -y texlive-latex-recommended texlive-latex-extra texlive-lang-cyrillic cm-super
 
       - name: Build PDF
         run: |
