@@ -13,7 +13,14 @@
 \usepackage[pdftex]{hyperref}
 \usepackage{fancyhdr}
 \usepackage{tabularx}
+\usepackage{fancybox}
+\usepackage{lmodern}
+\usepackage{tikz}
+\usepackage{hyperref}% http://ctan.org/pkg/hyperref
 
+\usepackage{changepage}
+
+\usepackage[margin=0.3in]{geometry}
 \usepackage[english,russian]{babel}
 
 \pagestyle{fancy}
@@ -21,7 +28,6 @@
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-\usepackage[margin=0.3in]{geometry}
 % Adjust margins
 \addtolength{\oddsidemargin}{-0.0in}
 \addtolength{\evensidemargin}{-0.0in}
@@ -30,8 +36,6 @@
 \addtolength{\textheight}{0.0in}
 
 \urlstyle{same}
-\usepackage[dvipsnames]{xcolor}
-\usepackage{hyperref}% http://ctan.org/pkg/hyperref
 \hypersetup{
   colorlinks=true,
   linkcolor=blue!50!red,
@@ -56,14 +60,9 @@
   \item\small{
   	\ifempty{#1}#2\else\textbf{#1}{: #2 \vspace{-2pt}}\fi
   }
+  \vspace{7pt}
 }
 
-
-
-\usepackage{fancybox}
-
-\usepackage{lmodern}
-\usepackage{tikz}
 
 % Style definition
 \definecolor{mygray}{gray}{0}
@@ -131,7 +130,6 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-\usepackage{changepage}
 \newcommand{\resumeDesc}[1]{\begin{adjustwidth}{5pt}{0pt}\vspace{-2pt}{\small{#1}}\end{adjustwidth}}
 
 %-------------------------------------------
