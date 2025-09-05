@@ -1,0 +1,42 @@
+name: Build and Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install LaTeX
+        run: sudo apt-get update && sudo apt-get install -y texlive-latex-recommended texlive-latex-extra
+
+      - name: Build PDF
+        run: |
+          pdflatex -interaction=nonstopmode -halt-on-error resume.tex
+
+      - name: Set version and filename
+        id: vars
+        run: |
+          VERSION="$(date +'%Y_%m').${{ github.run_number }}";
+          echo "TAG=resume_$VERSION" >> $GITHUB_ENV
+          echo "ASSET_NAME=resume_$VERSION.pdf" >> $GITHUB_ENV
+
+      - name: Rename PDF
+        run: mv resume.pdf ${{ env.ASSET_NAME }}
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ${{ env.ASSET_NAME }}
+          tag_name: ${{ env.TAG }}
+          name: "Resume ${{ env.TAG }}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
