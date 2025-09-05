@@ -29,8 +29,9 @@ jobs:
         run: |
           VERSION="$(date +'%Y_%m').${{ github.run_number }}";
           echo "TAG=resume_$VERSION" >> $GITHUB_ENV
-          echo "ASSET_NAME=resume_$VERSION.pdf" >> $GITHUB_ENV
-          mv resume.pdf ${{ env.ASSET_NAME }}
+          ASSET_NAME=resume_$VERSION.pdf
+          echo "ASSET_NAME=$ASSET_NAME" >> $GITHUB_ENV
+          mv resume.pdf $ASSET_NAME
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
